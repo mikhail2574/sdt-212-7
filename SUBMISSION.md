@@ -13,11 +13,11 @@ The agent routes inputs via an LLM planner/router to one of three tools, loops p
 ```mermaid
 graph TD
   A([start]) --> B[ingest user_input]
-  B --> C[planner/router (LLM)]
-  C -->|next=search| D[tool: wikipedia_summary]
-  C -->|next=calc| E[tool: safe_calc]
-  C -->|next=remember| F[tool: remember_facts (LLM)]
-  C -->|next=final| G[final_answer (LLM)]
+  B --> C["planner / router (LLM)"]
+  C -->|next=search| D["tool: wikipedia_summary"]
+  C -->|next=calc| E["tool: safe_calc"]
+  C -->|next=remember| F["tool: remember_facts (LLM)"]
+  C -->|next=final| G["final_answer (LLM)"]
   D --> C
   E --> C
   F --> C
